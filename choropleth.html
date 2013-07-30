@@ -5,6 +5,8 @@
     <title>Choropleth Map</title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/d3.geo.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <!--<script src="http://d3js.org/topojson.v1.min.js"></script>-->
     <script type="text/javascript" src="js/tooltip.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <link type="text/css" rel="stylesheet" href="css/choropleth.css"/>
@@ -15,12 +17,28 @@
   <body>
     <div class="row-fluid">
         <div class="span6">
-            <h4>Hope Awards</h4>
-                <div id="chart"></div>
+            <div class="headBox red">Hope Awards</div>
+                <div class="centerSVG" id="chart"></div>
+                <div class="textRight" id="chartInfo">
+                    <div class="hopeTopInfo red">
+                        <div id="hopeCounty">County Name</div>
+                    </div>
+                    <div class="hopeBottomInfo">
+                        <div id="hopeInfo">County Info</div>
+                    </div>
+                </div>
         </div>
-        <div class="span6">
-            <h4>Lottery Ticket Sales</h4>
-                <div id="chart2"></div>
+        <div class="span6 borderGray">
+            <div class="headBox blue">Lottery Ticket Sales</div>
+                <div class="centerSVG" id="chart2"></div>
+                <div id="chartInfo2">
+                    <div class="lotteryTopInfo blue">
+                        <div id="lotteryCounty"></div>
+                    </div>
+                    <div class="lotteryBottomInfo">
+                        <div id="lotteryInfo"></div>
+                    </div>
+                </div>
         </div>
     </div>            
     <script type="text/javascript" src="js/choropleth.js"></script>

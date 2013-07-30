@@ -23,8 +23,17 @@ d3.helper = {};
                     top: (absoluteMousePos[1] - 15)+'px',
                     position: 'absolute',
                     'background-color': '#fff',
-                    padding: '2px',
-                    'z-index': 1001
+                    padding: '2px 4px 2px 4px',
+                    'z-index': 1001,
+                    '-webkit-border-radius': '5px',
+                    'border-radius': '5px',
+                    '-moz-border-radius': '5px',
+                    border: 'solid',
+                    'border-width': '1px',
+                    'border-color':'#cccccc',
+                    '-webkit-box-shadow':  '2px 2px 5px 2px rgba(0, 0, 0, 0.15)',
+                    'box-shadow':  '2px 2px 5px 2px rgba(0, 0, 0, 0.15)',
+                    '-moz-box-shadow':  '2px 2px 5px 2px rgba(0, 0, 0, 0.15)'
                 });
                 // Add text using the accessor function, Crop text arbitrarily
                 tooltipDiv.style('width', function(d, i){ return (text(pD, pI).length > 80) ? '300px' : null; })

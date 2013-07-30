@@ -282,7 +282,7 @@ a:focus {
 [class*="span"] {
   float: left;
   min-height: 1px;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 
 .container,
@@ -409,8 +409,8 @@ a:focus {
   float: left;
   width: 100%;
   min-height: 30px;
-  margin-left: 2.127659574468085%;
-  *margin-left: 2.074468085106383%;
+ /* margin-left: 2.127659574468085%;
+  *margin-left: 2.074468085106383%;*/
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -455,8 +455,9 @@ a:focus {
 }
 
 .row-fluid .span6 {
-  width: 48.93617021276595%;
-  *width: 48.88297872340425%;
+  /*width: 48.93617021276595%;
+  *width: 48.88297872340425%;*/
+  width: 49.99%;
 }
 
 .row-fluid .span5 {
