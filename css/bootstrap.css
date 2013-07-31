@@ -2011,9 +2011,9 @@ table {
 .table td {
   padding: 8px;
   line-height: 20px;
-  text-align: left;
+  /*text-align: left;*/
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ffffff;
 }
 
 .table th {
@@ -2022,6 +2022,8 @@ table {
 
 .table thead th {
   vertical-align: bottom;
+  font-weight: normal;
+  padding: 12px 0px 12px 0px;
 }
 
 .table caption + thead tr:first-child th,
@@ -2034,7 +2036,7 @@ table {
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #ffffff;
 }
 
 .table .table {

@@ -30,23 +30,23 @@ rect {
   stroke-width: .5px;
 }
 
-.borderGray{
+/*.borderGray{
     border-left-style: solid;
     border-left-width:2px;
     border-left-color: #cccccc;
-}
+}*/
 
 .textRight{
     text-align:right;
 }
 
+.textCenter{
+    text-align:center;
+}
+
 .headBox{
-    width: 100%;
-    height: 40px;
-    color: #fff;
     font-size: 35px;
     text-align: center;
-    padding: 13px 0px 0px 0px;
 }
 
 .shadow{
@@ -69,36 +69,59 @@ rect {
     -moz-border-radius: 0px 7px 7px 0px;
 }
 
+.redHead{
+    background-color: #9a0000;
+    color:#ffffff;
+}
+
+.blueHead{
+    background-color: #001088;
+    color:#ffffff;
+}
+
+.subs{
+    font-size:11px;
+    color: #9C9C9C
+}
+
 .centerSVG{
     margin:auto;
     width:390px;
-    padding: 20px 0px 20px 0px;
-}
-.hopeTopInfo{
-    height:40px;
-    color:#fff;
-    text-align: center;
-    -webkit-border-radius: 7px 0px 0px 0px;
-    border-radius: 7px 0px 0px 0px;
-    -moz-border-radius: 7px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
-.hopeBottomInfo{
-    -webkit-border-radius: 0px 0px 0px 7px;
-    border-radius: 0px 0px 0px 7px;
-    -moz-border-radius: 0px 0px 0px 7px;
-}
-.lotteryTopInfo{
-    height:40px;
-    color:#fff;
-    text-align: center;
-    -webkit-border-radius: 0px 7px 0px 0px;
-    border-radius: 0px 7px 0px 0px;
-    -moz-border-radius: 0px 7px 0px 0px;
+.hopeAward{
+    background-color: #FFC2C2;
 }
 
-.lotteryBottomInfo{
-    -webkit-border-radius: 0px 0px 7px 0px;
-    border-radius: 0px 0px 7px 0px;
-    -moz-border-radius: 0px 0px 7px 0px;
+.hopeAwardSub{
+    background-color: #FFDEDE;
+}
+
+.hopeAwardSub2{
+    background-color: #FFEBEB;
+}
+
+.hopeStudent{
+    background-color: #FF9E9C;
+}
+
+.hopeStudentSub{
+    background-color: #FFC6C4;
+}
+
+.hopeStudentSub2{
+    background-color: #FFD5D4;
+}
+
+.lottery{
+    background-color: #A8E2FF;
+}
+
+.lotterySub{
+    background-color: #C9EDFF;
+}
+
+.lotterySub2{
+    background-color: #E6F7FF;
 }
