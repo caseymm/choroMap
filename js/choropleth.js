@@ -24,11 +24,6 @@ var svg = d3.select("#chart").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-/*svg.append("rect")
-    .attr("width", width)
-    .attr("height", height)
-    .on("click", reset);*/
-
 var counties = svg.append("g")
     .attr("id", "counties")
     .attr("class", "hope");
@@ -60,34 +55,9 @@ d3.json("data/myData/rankedData.json", function(data) {
             $('#hopeStudentInfoRank').html(''+newDict[d.id][4]+'')
             $('#lotteryInfo').html('$'+commasFormatter(newDict[d.id][5]+''))
             $('#lotteryInfoRank').html(''+newDict[d.id][6]+'')
+            d3.select(this).style({fill: '#F08C00', stroke: '', opacity:'1', 'stroke-width':''});
             });
-        /*.on("click", function(d) {
-            $('#chartInfo').append(''+ newDict[d.id][1] + newDict[d.id][0]+'')});*/
 
-    /*counties.append("path")
-      .datum(topojson.mesh(json, json.features, function(a, b) { return a !== b; }))
-      .attr("class", "mesh")
-      .attr("d", path);
-    var baseWidth = 500;
-    var scaleFactor = 4;*/
-
-//This does zoom but is a bit off    
-/*d3.selectAll('#counties path')
-    .on('click', function(d) {
-        // getBBox() is a native SVG element method
-        var bbox = this.getBBox(),
-            centroid = [bbox.x + bbox.width/2, bbox.y + bbox.height/2],
-            zoomScaleFactor = baseWidth / bbox.width,
-            zoomX = -centroid[0],
-            zoomY = -centroid[1];
-
-        // set a transform on the parent group element
-        d3.select('#counties')
-            .attr("transform", "scale(" + scaleFactor + ")" +
-                "translate(" + zoomX + "," + zoomY + ")");
-    });*/
-
-    //End of working section
     });
 
 });
@@ -96,22 +66,7 @@ var quantize = d3.scale.quantize()
   .domain([600000, 700000000])
   .range(d3.range(23).map(function(i) { return "q" + i + "-20"; }));
  
-/*function click(d) {
-  if (active === d) return reset();
-  counties.selectAll(".active").classed("active", false);
-  d3.select(this).classed("active", active = d);
 
-  var b = path.bounds(d);
-  counties.transition().duration(750).attr("transform",
-      "translate(" + projection.translate() + ")"
-      + "scale(" + .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height) + ")"
-      + "translate(" + -(b[1][0] + b[0][0]) / 2 + "," + -(b[1][1] + b[0][1]) / 2 + ")");
-}
-
-function reset() {
-  counties.selectAll(".active").classed("active", active = false);
-  counties.transition().duration(750).attr("transform", "");
-}  */
   
   
   };

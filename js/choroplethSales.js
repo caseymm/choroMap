@@ -15,11 +15,6 @@ var svg = d3.select("#chart2").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-/*svg.append("rect")
-    .attr("width", width)
-    .attr("height", height)
-    .on("click", reset);*/
-
 var counties = svg.append("g")
     .attr("id", "counties")
     .attr("class", "sales");
@@ -28,13 +23,14 @@ var newDict = {};
 var commasFormatter = d3.format(",.0f");
 
 d3.json("data/myData/rankedData.json", function(data) {
-    data.forEach(function(d) { newDict[d.id] = [d.COUNTY, d.hopeDollars, d.hopeRank, d.hopeStudents, d.hopeStudentRank, d.sales, d.salesRank];});
+    data.forEach(function(d) { newDict[d.id] = [d.COUNTY, d.hopeDollars, d.hopeRank, d.hopeStudents, d.hopeStudentRank, d.sales, d.salesRank, d.id];});
 
     d3.json("data/myData/simpleGA.json", function(json) {
         counties.selectAll("path")
         //.data(topojson.feature(json, json.features).features)
         .data(json.features)
         .enter().append("path")
+        .attr("id", function(d) { return (newDict[d.id][7]);})
         .attr("class", function(d) { return quantize(newDict[d.id][5]);})
         .attr("d", path)
         .call(d3.helper.tooltip()
@@ -44,41 +40,16 @@ d3.json("data/myData/rankedData.json", function(data) {
         .on('mouseover', function(d){ d3.select(this).style({fill: '#9736FF', stroke: '#6C23BA', opacity:'0.5', 'stroke-width':'3px'}); })
         .on('mouseout', function(d){ d3.select(this).style({fill: '', stroke: '', opacity:'1', 'stroke-width':''}); })
         .on("click", function(d) {
-            $('#hopeCountyB').html(''+ newDict[d.id][0] +'')
+            $('#hopeCountyB').html(''+ newDict[d.id][0])
             $('#hopeInfoB').html('$'+commasFormatter(newDict[d.id][1])+'')
             $('#hopeInfoRankB').html(''+newDict[d.id][2]+'')
             $('#hopeStudentInfoB').html(''+commasFormatter(newDict[d.id][3])+'')
             $('#hopeStudentInfoRankB').html(''+newDict[d.id][4]+'')
             $('#lotteryInfoB').html('$'+commasFormatter(newDict[d.id][5]+''))
             $('#lotteryInfoRankB').html(''+newDict[d.id][6]+'')
+            //$('#'+newDict[d.id][7]).toggleClass('.clicker')
             });
-        /*.on("click", function(d) {
-            $('#chartInfo').append(''+ newDict[d.id][1] + newDict[d.id][0]+'')});*/
 
-    /*counties.append("path")
-      .datum(topojson.mesh(json, json.features, function(a, b) { return a !== b; }))
-      .attr("class", "mesh")
-      .attr("d", path);
-    var baseWidth = 500;
-    var scaleFactor = 4;*/
-
-//This does zoom but is a bit off    
-/*d3.selectAll('#counties path')
-    .on('click', function(d) {
-        // getBBox() is a native SVG element method
-        var bbox = this.getBBox(),
-            centroid = [bbox.x + bbox.width/2, bbox.y + bbox.height/2],
-            zoomScaleFactor = baseWidth / bbox.width,
-            zoomX = -centroid[0],
-            zoomY = -centroid[1];
-
-        // set a transform on the parent group element
-        d3.select('#counties')
-            .attr("transform", "scale(" + scaleFactor + ")" +
-                "translate(" + zoomX + "," + zoomY + ")");
-    });*/
-
-    //End of working section
     });
 
 });
@@ -87,22 +58,7 @@ var quantize = d3.scale.quantize()
   .domain([5500000, 5500000000])
   .range(d3.range(23).map(function(i) { return "q" + i + "-20"; }));
  
-/*function click(d) {
-  if (active === d) return reset();
-  counties.selectAll(".active").classed("active", false);
-  d3.select(this).classed("active", active = d);
 
-  var b = path.bounds(d);
-  counties.transition().duration(750).attr("transform",
-      "translate(" + projection.translate() + ")"
-      + "scale(" + .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height) + ")"
-      + "translate(" + -(b[1][0] + b[0][0]) / 2 + "," + -(b[1][1] + b[0][1]) / 2 + ")");
-}
-
-function reset() {
-  counties.selectAll(".active").classed("active", active = false);
-  counties.transition().duration(750).attr("transform", "");
-}  */
   
   
 

@@ -2013,7 +2013,7 @@ table {
   line-height: 20px;
   /*text-align: left;*/
   vertical-align: top;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #dddddd;
 }
 
 .table th {

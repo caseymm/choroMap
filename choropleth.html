@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/tooltip.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <link type="text/css" rel="stylesheet" href="css/choropleth.css"/>
+    <link type="text/css" rel="stylesheet" href="css/table.css"/>
     <link type="text/css" rel="stylesheet" href="css/colorbrewer.css"/>
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css"/>
@@ -23,19 +24,19 @@
                     </thead>
                     <tbody>
                         <tr><td colspan="2"><div class="centerSVG" id="chart"></div></td></tr>
-                        <tr><th class="redHead textCenter" id ="hopeCounty" colspan="2">(Select a County)</th></tr>
+                        <tr><td class="redHead textCenter selected" id ="hopeCounty" colspan="2">(Select a County)</td></tr>
                         
                         <tr><td class="hopeAward textCenter" colspan="2">Hope Award</td></tr>
-                        <tr><td class="hopeAwardSub">Total Hope Award</td><td class="textRight hopeAwardSub2" id="hopeInfo">A info</td></tr>
-                        <tr><td class="hopeAwardSub">Hope Award Rank</td><td class="textRight hopeAwardSub2" id="hopeInfoRank">A info</td></tr>
+                        <tr><td class="hopeAwardSub subs">Total Hope Award</td><td class="textRight hopeAwardSub2" id="hopeInfo">--</td></tr>
+                        <tr><td class="hopeAwardSub subs">Hope Award Rank</td><td class="textRight hopeAwardSub2" id="hopeInfoRank">--</td></tr>
                         
                         <tr><td class="hopeStudent textCenter" colspan="2">Hope Students</td></tr>
-                        <tr><td class="hopeStudentSub">Number of Hope Students</td><td class="textRight hopeStudentSub2" id="hopeStudentInfo">A info</td></tr>
-                        <tr><td class="hopeStudentSub">Hope Student Rank</td><td class="textRight hopeStudentSub2" id="hopeStudentInfoRank">A info</td></tr>
+                        <tr><td class="hopeStudentSub subs">Number of Hope Students</td><td class="textRight hopeStudentSub2" id="hopeStudentInfo">--</td></tr>
+                        <tr><td class="hopeStudentSub subs">Hope Student Rank</td><td class="textRight hopeStudentSub2" id="hopeStudentInfoRank">--</td></tr>
                         
                         <tr><td class="lottery textCenter" colspan="2">Lottery Ticket Sales</td></tr>
-                        <tr><td class="lotterySub">Total Ticket Sales</td><td class="textRight lotterySub2" id="lotteryInfo">A info</td></tr>
-                        <tr><td class="lotterySub">Ticket Sales Rank</td><td class="textRight lotterySub2" id="lotteryInfoRank">A info</td></tr>
+                        <tr><td class="lotterySub subs">Total Ticket Sales</td><td class="textRight lotterySub2" id="lotteryInfo">--</td></tr>
+                        <tr><td class="lotterySub subs">Ticket Sales Rank</td><td class="textRight lotterySub2" id="lotteryInfoRank">--</td></tr>
                     </tbody>
                 </table>
         </div>
@@ -46,25 +47,25 @@
                     </thead>
                     <tbody>
                         <tr><td colspan="2"><div class="centerSVG" id="chart2"></div></td></tr>
-                        <tr><th class="blueHead textCenter" id ="hopeCountyB" colspan="2">(Select a County)</th></tr>
+                        <tr><td class="blueHead textCenter selected" id ="hopeCountyB" colspan="2">(Select a County)</td></tr>
                         
                         <tr><td class="hopeAward textCenter" colspan="2">Hope Award</td></tr>
-                        <tr><td class="hopeAwardSub2" id="hopeInfoB">A info</td><td class="hopeAwardSub textRight">Total Hope Award</td></tr>
-                        <tr><td class="hopeAwardSub2" id="hopeInfoRankB">A info</td><td class="hopeAwardSub textRight">Hope Award Rank</td></tr>
+                        <tr><td class="hopeAwardSub2" id="hopeInfoB">--</td><td class="hopeAwardSub textRight subs">Total Hope Award</td></tr>
+                        <tr><td class="hopeAwardSub2" id="hopeInfoRankB">--</td><td class="hopeAwardSub textRight subs">Hope Award Rank</td></tr>
                         
                         <tr><td class="hopeStudent textCenter" colspan="2">Hope Students</td></tr>
-                        <tr><td class="hopeStudentSub2" id="hopeStudentInfoB">A info</td><td class="hopeStudentSub textRight">Number of Hope Students</td></tr>
-                        <tr><td class="hopeStudentSub2" id="hopeStudentInfoRankB">A info</td><td class="hopeStudentSub textRight">Hope Student Rank</td></tr>
+                        <tr><td class="hopeStudentSub2" id="hopeStudentInfoB">--</td><td class="hopeStudentSub textRight subs">Number of Hope Students</td></tr>
+                        <tr><td class="hopeStudentSub2" id="hopeStudentInfoRankB">--</td><td class="hopeStudentSub textRight subs">Hope Student Rank</td></tr>
                         
                         <tr><td class="lottery textCenter" colspan="2">Lottery Ticket Sales</td></tr>
-                        <tr><td class="lotterySub2" id="lotteryInfoB">A info</td><td class="lotterySub textRight">Total Ticket Sales</td></tr>
-                        <tr><td class="lotterySub2" id="lotteryInfoRankB">A info</td><td class="lotterySub textRight">Ticket Sales Rank</td></tr>
+                        <tr><td class="lotterySub2" id="lotteryInfoB">--</td><td class="lotterySub textRight subs">Total Ticket Sales</td></tr>
+                        <tr><td class="lotterySub2" id="lotteryInfoRankB">--</td><td class="lotterySub textRight subs">Ticket Sales Rank</td></tr>
                     </tbody>
                 </table>
         </div>
     </div>
     
     <script type="text/javascript" src="js/choropleth.js"></script>
-    <script type="text/javascript" src="js/choroplethSales.js"></script>   
+    <script type="text/javascript" src="js/choroplethSales.js"></script>
   </body>
 </html>
