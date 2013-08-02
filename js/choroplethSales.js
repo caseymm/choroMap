@@ -37,7 +37,7 @@ d3.json("data/myData/rankedData.json", function(data) {
             //.attr({class: function(d, i) { return d + ' ' +  i + ' A'; }})
             .text(function(d){ return 'County: '+ newDict[d.id][0] + '<br />Lottery Ticket Sales: $' +commasFormatter(newDict[d.id][5]); })
         )
-        .on('mouseover', function(d){ d3.select(this).style({fill: '#9736FF', stroke: '#6C23BA', opacity:'0.5', 'stroke-width':'3px'}); })
+        .on('mouseover', function(d){ d3.select(this).style({fill: '#0FDB42', stroke: '#0FDB42', opacity:'0.5', 'stroke-width':'3px'}); })
         .on('mouseout', function(d){ d3.select(this).style({fill: '', stroke: '', opacity:'1', 'stroke-width':''}); })
         .on("click", function(d) {
             $('#hopeCountyB').html(''+ newDict[d.id][0])

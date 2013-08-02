@@ -1326,7 +1326,7 @@
 .RdYlGn .q9-11{fill:rgb(26,152,80)}
 .RdYlGn .q10-11{fill:rgb(0,104,55)}
 
-.hope .q0-20{fill:#ffefef}
+/*.hope .q0-20{fill:#ffefef}
 .hope .q1-20{fill:#ffdede}
 .hope .q2-20{fill:#ffcdcd}
 .hope .q3-20{fill:#ffbcbc}
@@ -1348,9 +1348,33 @@
 .hope .q19-20{fill:#9a0000}
 .hope .q20-20{fill:#890000}
 .hope .q21-20{fill:#780000}
-.hope .q22-20{fill:#670000}
+.hope .q22-20{fill:#670000}*/
 
-.sales .q0-20{fill:#eef0ff}
+.hope .q0-20{fill:#fff2ec}
+.hope .q1-20{fill:#fee7db}
+.hope .q2-20{fill:#fedccb}
+.hope .q3-20{fill:#fed0ba}
+.hope .q4-20{fill:#fec5a9}
+.hope .q5-20{fill:#fdba99}
+.hope .q6-20{fill:#fdae88}
+.hope .q7-20{fill:#fda377}
+.hope .q8-20{fill:#fd9866}
+.hope .q9-20{fill:#fc8c56}
+.hope .q10-20{fill:#fc8145}
+.hope .q11-20{fill:#fc7634}
+.hope .q12-20{fill:#fb6a24}
+.hope .q13-20{fill:#fb5f13}
+.hope .q14-20{fill:#f95404}
+.hope .q15-20{fill:#e84f04}
+.hope .q16-20{fill:#d84903}
+.hope .q17-20{fill:#c74303}
+.hope .q18-20{fill:#b63e03}
+.hope .q19-20{fill:#a53803}
+.hope .q20-20{fill:#953202}
+.hope .q21-20{fill:#842d02}
+.hope .q22-20{fill:#732702}
+
+/*.sales .q0-20{fill:#eef0ff}
 .sales .q1-20{fill:#dde1ff}
 .sales .q2-20{fill:#ccd2ff}
 .sales .q3-20{fill:#bbc3ff}
@@ -1372,4 +1396,28 @@
 .sales .q19-20{fill:#0014aa}
 .sales .q20-20{fill:#001299}
 .sales .q21-20{fill:#001088}
-.sales .q22-20{fill:#000e77}
+.sales .q22-20{fill:#000e77}*/
+
+.sales .q0-20{fill:#dbf0da}
+.sales .q1-20{fill:#cfebcd}
+.sales .q2-20{fill:#c3e7c1}
+.sales .q3-20{fill:#b7e2b5}
+.sales .q4-20{fill:#abdda9}
+.sales .q5-20{fill:#a0d89d}
+.sales .q6-20{fill:#94d390}
+.sales .q7-20{fill:#88cf84}
+.sales .q8-20{fill:#7cca78}
+.sales .q9-20{fill:#70c56c}
+.sales .q10-20{fill:#64c060}
+.sales .q11-20{fill:#59bb54}
+.sales .q12-20{fill:#4db648}
+.sales .q13-20{fill:#48aa43}
+.sales .q14-20{fill:#439e3e}
+.sales .q15-20{fill:#3e9239}
+.sales .q16-20{fill:#398535}
+.sales .q17-20{fill:#337930}
+.sales .q18-20{fill:#2e6d2b}
+.sales .q19-20{fill:#296126}
+.sales .q20-20{fill:#245521}
+.sales .q21-20{fill:#1f491d}
+.sales .q22-20{fill:#1a3c18}
