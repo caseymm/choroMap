@@ -47,6 +47,7 @@ d3.json("data/myData/rankedData.json", function(data) {
             $('#hopeStudentInfoRankB').html(''+newDict[d.id][4]+'')
             $('#lotteryInfoB').html('$'+commasFormatter(newDict[d.id][5]+''))
             $('#lotteryInfoRankB').html(''+newDict[d.id][6]+'')
+            d3.select(this).style({fill: '#0A800A', stroke: '', opacity:'1', 'stroke-width':''});
             //$('#'+newDict[d.id][7]).toggleClass('.clicker')
             });
 

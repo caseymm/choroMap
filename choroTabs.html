@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Choropleth Map</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/d3.geo.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <!--<script src="http://d3js.org/topojson.v1.min.js"></script>-->
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/choropleth.css"/>
+    <link type="text/css" rel="stylesheet" href="css/table.css"/>
+    <link type="text/css" rel="stylesheet" href="css/colorbrewer.css"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css"/>
+  </head>
+  <body>
+    <div class="row-fluid">
+        <div class="span12">
+            
+            <div class="tab-pane" id="tabs-basic">
+			<div class="tabbable">
+			    <ul class="nav nav-tabs">
+					<li class="active"><a href="#hope" data-toggle="tab">Hope Info</a></li>
+                                        <li><a href="#lottery" data-toggle="tab">Lottery Ticket Info</a></li>
+                            </ul>  
+                               
+	<div class="tab-content">
+	    <div id="hope" class="tab-pane active">
+            
+                <table class="table table-bordered">
+                    <thead>
+                        <tr><th class="redHead headBox" colspan="2">Hope Awards</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="2"><div class="centerSVG" id="chart"></div></td></tr>
+                        <tr><td class="redHead textCenter selected" id ="hopeCounty" colspan="2">(Select a County)</td></tr>
+                        
+                        <tr><td class="hopeAward textCenter" colspan="2">Hope Award</td></tr>
+                        <tr><td class="hopeAwardSub subs">Total Hope Award</td><td class="textRight hopeAwardSub2" id="hopeInfo">--</td></tr>
+                        <tr><td class="hopeAwardSub subs">Hope Award Rank</td><td class="textRight hopeAwardSub2" id="hopeInfoRank">--</td></tr>
+                        
+                        <tr><td class="hopeStudent textCenter" colspan="2">Hope Students</td></tr>
+                        <tr><td class="hopeStudentSub subs">Number of Hope Students</td><td class="textRight hopeStudentSub2" id="hopeStudentInfo">--</td></tr>
+                        <tr><td class="hopeStudentSub subs">Hope Student Rank</td><td class="textRight hopeStudentSub2" id="hopeStudentInfoRank">--</td></tr>
+                        
+                        <tr><td class="lottery textCenter" colspan="2">Lottery Ticket Sales</td></tr>
+                        <tr><td class="lotterySub subs">Total Ticket Sales</td><td class="textRight lotterySub2" id="lotteryInfo">--</td></tr>
+                        <tr><td class="lotterySub subs">Ticket Sales Rank</td><td class="textRight lotterySub2" id="lotteryInfoRank">--</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="lottery" class="tab-pane">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr><th class="blueHead headBox" colspan="2">Lottery Ticket Sales</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="2"><div class="centerSVG" id="chart2"></div></td></tr>
+                        <tr><td class="blueHead textCenter selected" id ="hopeCountyB" colspan="2">(Select a County)</td></tr>
+                        
+                        <tr><td class="hopeAward textCenter" colspan="2">Hope Award</td></tr>
+                        <tr><td class="hopeAwardSub subs">Total Hope Award</td><td class="textRight hopeAwardSub2" id="hopeInfoB">--</td></tr>
+                        <tr><td class="hopeAwardSub subs">Hope Award Rank</td><td class="textRight hopeAwardSub2" id="hopeInfoRankB">--</td></tr>
+                        
+                        <tr><td class="hopeStudent textCenter" colspan="2">Hope Students</td></tr>
+                        <tr><td class="hopeStudentSub subs">Number of Hope Students</td><td class="textRight hopeStudentSub2" id="hopeStudentInfoB">--</td></tr>
+                        <tr><td class="hopeStudentSub subs">Hope Student Rank</td><td class="textRight hopeStudentSub2" id="hopeStudentInfoRankB">--</td></tr>
+                        
+                        <tr><td class="lottery textCenter" colspan="2">Lottery Ticket Sales</td></tr>
+                        <tr><td class="lotterySub subs">Total Ticket Sales</td><td class="textRight lotterySub2" id="lotteryInfoB">--</td></tr>
+                        <tr><td class="lotterySub subs">Ticket Sales Rank</td><td class="textRight lotterySub2" id="lotteryInfoRankB">--</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/choropleth.js"></script>
+    <script type="text/javascript" src="js/choroplethSales.js"></script>
+  </body>
+</html>
