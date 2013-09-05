@@ -11,10 +11,10 @@ var width = 450;
 var height = 600;
 //var active;
 
-var projection = d3.geo.albersUsa()
+var projection = d3.geo.mercator()
                      //.center([-84.36322, 32.397649]);
-                   .scale(5000)
-                   .translate([-875,-180]);
+                   .scale(25000)
+                   .translate([5950,2600]);
                    
 
 var path = d3.geo.path()
@@ -55,7 +55,10 @@ d3.json("data/myData/rankedData.json", function(data) {
             $('#hopeStudentInfoRank').html(''+newDict[d.id][4]+'')
             $('#lotteryInfo').html('$'+commasFormatter(newDict[d.id][5]+''))
             $('#lotteryInfoRank').html(''+newDict[d.id][6]+'')
-            d3.select(this).style({fill: '#F08C00', stroke: '', opacity:'1', 'stroke-width':''});
+            // Find previously selected, unselect
+            //d3.select(".selected").classed("selected", false);
+            // Select current item
+            //d3.select(this).classed("selected", true);
             });
 
     });

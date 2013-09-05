@@ -2,10 +2,10 @@ var width = 450;
 var height = 600;
 //var active;
 
-var projection = d3.geo.albersUsa()
+var projection = d3.geo.mercator()
                      //.center([-84.36322, 32.397649]);
-                   .scale(5000)
-                   .translate([-875,-180]);
+                   .scale(25000)
+                   .translate([5950,2600]);
                    
 
 var path = d3.geo.path()
